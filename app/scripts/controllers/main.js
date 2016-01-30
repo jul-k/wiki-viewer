@@ -19,9 +19,8 @@ app.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
         $scope.search +
         '&format=json&callback=\?', function(res){
             console.log(res);
-              $scope.resultList = res.data;
+              $scope.resultList = res.query.search;
+              console.log($scope.resultList);
           });
     };
-
-
 }]);
