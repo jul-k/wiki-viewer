@@ -29,8 +29,8 @@
 <div class="row">
     <div class="col-sm-offset-2 col-sm-8">
         <div class="list-of-results" ng-repeat="article in resultList">
-            <h1>{{article.title}}</h1>
-            <p ng-bind-html="article.snippet"></p>
+            <a ng-href="http://en.wikipedia.org/wiki?curid={{article.pageid}}" target="_blank">{{article.title}}</a>
+            <p>{{article.extract}}</p>
         </div>
     </div>
 </div>

@@ -15,12 +15,10 @@ app.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.search = '';
 
     $scope.getResults = function () {
-        $.getJSON('https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch='+
+        $.getJSON('https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro=&explaintext=&exsentences=1&exlimit=max&gsrsearch='+
         $scope.search +
-        '&format=json&callback=\?', function(res){
-            console.log(res);
-              $scope.resultList = res.query.search;
-              console.log($scope.resultList);
+        '&callback=\?', function(res){
+              $scope.resultList = res.query.pages;
           });
     };
 }]);
