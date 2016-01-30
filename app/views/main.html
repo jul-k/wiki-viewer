@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-sm-offset-4 col-sm-4">
+        <div class="input-group">
+            <input type="search" class="form-control" name="search" value="" placeholder="type here" ng-model="search">
+            <div class="input-group-addon" ng-click='getResults();'>
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-offset-4 col-sm-4">
+        <h3>or read random article</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-offset-4 col-sm-4">
+        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
+            <button type="button" class="btn btn-info center-block" name="button">
+                random, please
+                <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+            </button>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-offset-2 col-sm-8">
+        <div class="list-of-results" ng-repeat="article in resultList">
+            <h1>{{}}</h1>
+            <p>{{}}</p>
+        </div>
+    </div>
+</div>

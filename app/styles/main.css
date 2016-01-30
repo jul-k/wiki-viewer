@@ -1,0 +1,19 @@
+body {
+    background-color: #BFDAD3;
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.glyphicon-search {
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+}
+
+.glyphicon-random {
+    margin-left: 7px;
+}

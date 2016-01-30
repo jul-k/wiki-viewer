@@ -7,11 +7,21 @@
  * # MainCtrl
  * Controller of the wikiViewerApp
  */
-angular.module('wikiViewerApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+var app = angular.module('wikiViewerApp');
+
+app.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
+    $scope.resultList = [];
+
+    $scope.search = '';
+
+    $scope.getResults = function () {
+        $.getJSON('https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch='+
+        $scope.search +
+        '&format=json&callback=\?', function(res){
+            console.log(res);
+              $scope.resultList = res.data;
+          });
+    };
+
+
+}]);
