@@ -21,4 +21,12 @@ app.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
               $scope.resultList = res.query.pages;
           });
     };
+
+    $scope.checkIfEnterKeyWasPressed = function($event){
+        var keyCode = $event.which || $event.keyCode;
+        if (keyCode === 13) {
+            $scope.getResults();
+        }
+    };
+
 }]);
