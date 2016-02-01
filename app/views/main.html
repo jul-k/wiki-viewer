@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-offset-4 col-sm-4">
         <div class="input-group">
-            <input type="search" class="form-control" name="search" value="" placeholder="type here" ng-model="search" ng-keypress="checkIfEnterKeyWasPressed($event)">
+            <input type="search" class="form-control" name="search" value="" placeholder="type here" autofocus="autofocus" ng-model="search" ng-keypress="checkIfEnterKeyWasPressed($event)">
             <div class="input-group-addon" ng-click='getResults();'>
                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </div>
@@ -17,11 +17,9 @@
 
 <div class="row">
     <div class="col-sm-offset-4 col-sm-4">
-        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
-            <button type="button" class="btn btn-info center-block" name="button">
-                random, please
-                <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
-            </button>
+        <a class="btn btn-info" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
+            random, please
+            <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
         </a>
     </div>
 </div>
