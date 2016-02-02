@@ -1,16 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Averia+Sans+Libre);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400italic);
 
 body {
     background-color: #BFDAD3;
-    font-family: 'Averia Sans Libre', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .row {
     margin-top: 30px;
 }
 
-.row:first-child {
+.marginTopBefore {
     margin-top: 20%;
+}
+
+.marginTopAfter {
+    margin-top: 3%;
 }
 
 .col-sm-4 {
@@ -23,6 +28,8 @@ body {
     border-bottom: 4px #344434 solid;
     background-color: transparent;
     box-shadow: none;
+    text-align: center;
+    font-size: 2.3rem;
 }
 
 .form-control:focus {
@@ -62,9 +69,40 @@ h3 {
 }
 
 .btn:hover {
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .glyphicon-random {
     margin-left: 7px;
+}
+
+.list-of-results {
+    border-left: 5px solid transparent;
+    transition: border-left-color ease-in-out 0.5s, background-color ease-in-out 0.5s;
+    padding: 5px;
+}
+
+.list-of-results:hover {
+    border-left-color: #166258;
+    background-color: #C9AFAF;
+}
+
+.list-of-results a {
+    text-decoration: none;
+    font-size: 2.8rem;
+}
+
+.list-of-results p {
+    margin-top: 5px;
+    font-size: 1.8rem;
+}
+
+.row:last-child {
+    margin-bottom: 3%;
+}
+
+@media screen and (max-width: 279px) {
+    .github-corner {
+        display: none;
+    }
 }
